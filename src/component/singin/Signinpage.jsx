@@ -22,23 +22,20 @@ function Signinpage() {
               </div>
             </form>
           </div>
-          <div className="right
-          ">
-             <h2>I do not have a account</h2>
+          <div
+            className="right
+          "
+          >
+            <h2>I do not have a account</h2>
             <p>Sign up with your email and password</p>
             <form>
-            <Input type="text" label="displayName" />
-            <Input type="email" label="Email" />
-            <Input type="password" label="Password" />
-            <Input type="password" label="Confirm Password" />
-            <div className="btn">
-
-            <Btnsignin btnName="sign in" className="google" />
-            </div>
-
-
-
-
+              <Input type="text" label="displayName" />
+              <Input type="email" label="Email" />
+              <Input type="password" label="Password" />
+              <Input type="password" label="Confirm Password" />
+              <div className="btn">
+                <Btnsignin btnName="do sign in" className="google" />
+              </div>
             </form>
           </div>
         </div>
