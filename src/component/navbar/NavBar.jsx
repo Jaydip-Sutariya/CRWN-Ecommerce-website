@@ -1,6 +1,6 @@
 import React from "react";
 import pic from "./logo.png.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -19,12 +19,15 @@ function NavBar() {
         <span>
           <NavLink to="/contact">CONTACT</NavLink>{" "}
         </span>
+
         <span>
           <NavLink to="/signin">SIGN IN</NavLink>{" "}
         </span>
 
         <button>0</button>
+        <Outlet/>
       </div>
+
     </div>
   );
 }

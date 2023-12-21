@@ -1,15 +1,28 @@
-import React from 'react'
-import BoxItem from './BoxItem';
+import React from "react";
+import BoxItem from "./BoxItem";
 import { useSelector } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 export default function Homepage() {
-    const data = useSelector((state)=>{
-        return state.datas
-      })
+  const data = useSelector((state) => {
+    return state.datas;
+  });
   return (
     <div className="ImgBox">
-    {Object.keys(data).map((key) => {
+      {/* <BrowserRouter>
+      <Routes>
+        <Route path="/" element= {<BoxItem />} />
+      </Routes>
+      
+      </BrowserRouter> */}
+
+
+
+      
+      <BoxItem />
+      <BoxItem />
+      {/* {Object.keys(data).map((key) => {
         console.log(data);
       return (
         <BoxItem
@@ -19,7 +32,7 @@ export default function Homepage() {
           
         />
       );
-    })}
-  </div>
-  )
+    })} */}
+    </div>
+  );
 }

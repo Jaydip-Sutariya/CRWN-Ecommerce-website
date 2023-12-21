@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import Navebarpage from "./component/navbar/Navebarpage";
 import Contect from "./component/contact/Contect";
 import Signinpage from "./component/singin/Signinpage";
+import BoxItem from "./component/home/BoxItem";
 
 // const data = {
 //   hats: {
@@ -279,12 +280,13 @@ export default function App() {
                 <Homepage />
               </>
             }
+            children=[{},{}]
           />
+          
           <Route
             path="/shop"
             element={
               <>
-                <Navebarpage />
                 <Shopepage />
               </>
             }
@@ -293,7 +295,6 @@ export default function App() {
             path="/contact"
             element={
               <>
-                <Navebarpage />
                 <Contect/>
               </>
             }
@@ -302,7 +303,6 @@ export default function App() {
             path="/signin"
             element={
               <>
-                <Navebarpage />
                 <Signinpage/>
               </>
             }
