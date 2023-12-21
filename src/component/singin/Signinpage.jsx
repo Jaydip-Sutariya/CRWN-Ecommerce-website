@@ -18,7 +18,7 @@ function Signinpage() {
               </p>
               <div className="btn">
                 <Btnsignin btnName="sign in" />
-                <Btnsignin btnName="Sign in with Google" />
+                <Btnsignin btnName="Sign in with Google or facebook" />
               </div>
             </form>
           </div>
