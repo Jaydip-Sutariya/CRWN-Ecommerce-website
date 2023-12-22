@@ -1,6 +1,6 @@
 import React from "react";
 import pic from "./logo.png.png";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -14,18 +14,17 @@ function NavBar() {
       </div>
       <div className="pageTag">
         <span>
-          <NavLink to="/shop">SHOP</NavLink>{" "}
+          <NavLink to="/shop">SHOP</NavLink>
         </span>
         <span>
-          <NavLink to="/contact">CONTACT</NavLink>{" "}
+          <NavLink to="/contact">CONTACT</NavLink>
         </span>
 
         <span>
-          <NavLink to="/signin">SIGN IN</NavLink>{" "}
+          <NavLink to="/signin">SIGN IN</NavLink>
         </span>
 
         <button>0</button>
-        <Outlet/>
       </div>
 
     </div>
