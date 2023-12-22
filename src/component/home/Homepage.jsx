@@ -1,7 +1,9 @@
 import React from "react";
 import BoxItem from "./BoxItem";
 import { useSelector } from "react-redux";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 export default function Homepage() {
@@ -9,30 +11,27 @@ export default function Homepage() {
     return state.datas;
   });
   return (
-    <div className="ImgBox">
-      {/* <BrowserRouter>
-      <Routes>
-        <Route path="/" element= {<BoxItem />} />
-      </Routes>
-      
-      </BrowserRouter> */}
+      <>
+      <div className="homediv">
+        <BoxItem/>
+        <BoxItem/>
+        <BoxItem/>
+        <BoxItem/>
+        <BoxItem/>
+        </div>
+      </>
+        )}
 
-
-
-      
-      <BoxItem />
-      <BoxItem />
+    
       {/* {Object.keys(data).map((key) => {
         console.log(data);
       return (
-        <BoxItem
+      <BoxItem
           Imgurl={data[key].url}
           title={data[key].title}
           key={data[key].id}
-          
         />
       );
     })} */}
-    </div>
-  );
-}
+
+

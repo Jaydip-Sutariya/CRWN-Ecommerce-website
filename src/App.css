@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  border: 2px solid #d0ff00;
   padding: 20px 40px;
   margin: 8px;
   font-weight: 300;
@@ -33,14 +34,14 @@ body {
   height: 390px; 
 } */
 
-.pageTag span {
+.pageTag a {
   padding: 10px 15px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .active {
   color: rgb(255, 0, 0) !important;
 }
-.pageTag span a {
+.pageTag a {
   text-decoration: none;
   color: black;
   font-weight: 700;
@@ -49,8 +50,38 @@ body {
   width: 40px;
   height: 25px;
 }
-.ImgBox {
-  /* width: 100%; */
+.homediv {
+border:5px solid #d0ff00;
+padding: 20px 80px
+}
+.container{
+  width: 30%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid rgb(255, 0, 0); */
+
+}
+.box{
+  border: 1px solid rgb(255, 0, 0);
+  width: 100%;
+  height: 240px;
+}
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.childbox{
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+/* .ImgBox {
   display: flex;
   flex-wrap: wrap;
   padding: 20px 80px;
@@ -64,26 +95,20 @@ body {
   align-items: center;
   border: 1px solid rgb(0, 0, 0);
 
-  /* background-size: cover; */
-  /* background-position: center center; */
 }
 .box {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  /* border: 5px solid green; */
 }
 .container img {
   height: 100%;
   width: 100%;
   overflow: hidden;
   object-fit: cover;
-  /* opacity: 0.8; */
 
-  /* border: 1px solid yellow; */
 }
 .container img:hover {
-  /* opacity: 0.8; */
   transform: scale(1.2);
   transition: transform 10s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: pointer;
@@ -150,22 +175,18 @@ body {
   }
 }
 
-/* .childbox:hover {
-  opacity: 1;
-  cursor: all-scroll;
-} */
+
 .container:nth-child(4) {
-  /* border: 5px solid red; */
+  border: 5px solid red;
   object-fit: cover;
   height: 380px;
   flex: 1;
 }
 .container:nth-child(5) {
-  /* border: 5px solid red; */
   height: 380px;
   width: 100%;
   flex: 1;
-}
+} */
 .shopepage {
 }
 .shopepadding {

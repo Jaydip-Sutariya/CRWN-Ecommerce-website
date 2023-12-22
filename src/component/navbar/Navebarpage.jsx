@@ -4,9 +4,9 @@ import NavBar from './NavBar'
 function Navebarpage() {
 
   return (
-    <div>
+    <>
       <NavBar/>
-    </div>
+    </>
   )
 }
 
