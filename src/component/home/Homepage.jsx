@@ -13,11 +13,13 @@ export default function Homepage() {
   return (
       <>
       <div className="homediv">
+        <div className="home">
         <BoxItem/>
         <BoxItem/>
         <BoxItem/>
         <BoxItem/>
         <BoxItem/>
+        </div>
         </div>
       </>
         )}
