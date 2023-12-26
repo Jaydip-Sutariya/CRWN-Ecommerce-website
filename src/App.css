@@ -5,7 +5,7 @@
 }
 body {
   border: 2px solid #d0ff00;
-  padding: 20px 40px;
+  padding: 20px 60px;
   margin: 8px;
   font-weight: 300;
   font-size: 14px;
@@ -51,36 +51,120 @@ body {
   height: 25px;
 }
 .homediv {
-border:5px solid #d0ff00;
-padding: 20px 80px
+  /* border:5px solid #d0ff00; */
+  padding: 20px 40px;
+
 }
-.container{
-  width: 30%;
+.home{
+    display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container {
+  width: 32%;
+  height: 240px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid rgb(255, 0, 0); */
-
+  margin: 0px 7.5px 15px;
+  border: 1px solid black;
 }
-.box{
-  border: 1px solid rgb(255, 0, 0);
+.box {
+  /* border: 1px solid rgb(255, 0, 0); */
   width: 100%;
-  height: 240px;
+  height: 100%;
+  overflow: hidden;
 }
 .box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
-.childbox{
-  border: 1px solid blue;
+.box img:hover {
+  transform: scale(1.2);
+  transition: transform 10s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* cursor: pointer; */
+}
+.nlink {
+  height: 90px;
+  padding: 0px 20px;
+  border: 1px solid black;
+  background-color: white;
+  opacity: 0.5;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
 }
+.nlink:hover {
+  animation: wiggle 2s linear infinite;
+  opacity: 0.7;
+  color: black;
+}
+.nlink:hover h2 {
+  color: black;
+}
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+.nlink h2 {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 22px;
+  color: rgb(74, 74, 74);
+}
+.nlink p {
+  font-weight: lighter;
+  font-size: 15px;
+}
+.container:nth-child(4) {
+  /* border: 5px solid rgb(42, 42, 165); */
+  height: 380px;
+  flex: 1 1 auto;
+  /* width: 45%; */
+  object-fit: fill;
+  margin-left: 0;
+}
+.container:nth-child(5) {
+  /* border: 5px solid rgb(42, 42, 165); */
+  height: 380px;
+  flex: 1 1 auto;
+  /* width: 45%; */
+  object-fit: cover;
+  margin-right: 0;
+}
+.container:nth-child(1) {
+margin-left: 0;
+}
+.container:nth-child(3) {
+  margin-right: 0;
+  }
+
 /* .ImgBox {
   display: flex;
   flex-wrap: wrap;
