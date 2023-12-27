@@ -1,8 +1,13 @@
 import React from "react";
 import pic from "./logo.png.png";
 import { NavLink } from "react-router-dom";
+import {  useSelector } from "react-redux";
+
+
 
 function NavBar() {
+  const counter= useSelector(state => state.counter.count)
+console.log(counter);
   return (
     <div className="MainNav">
       <div className="simbol">
@@ -24,7 +29,7 @@ function NavBar() {
           <NavLink to="/signin">SIGN IN</NavLink>
         </span>
 
-        <button>0</button>
+        <button>{counter}</button>
       </div>
 
     </div>

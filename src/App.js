@@ -7,8 +7,12 @@ import { useSelector } from "react-redux";
 import Navebarpage from "./component/navbar/Navebarpage";
 import Contect from "./component/contact/Contect";
 import Signinpage from "./component/singin/Signinpage";
-import BoxItem from "./component/home/BoxItem";
+// import BoxItem from "./component/home/BoxItem";
 import Mens from "./component/shope/pages/Mens";
+import Womens from "./component/shope/pages/Womens";
+import Jackets from "./component/shope/pages/Jackets";
+import Sneakers from "./component/shope/pages/Sneakers";
+import Hats from "./component/shope/pages/Hats";
 
 
 
@@ -47,7 +51,7 @@ export default function App() {
             }
           />  
            <Route
-            path="/shop/men"
+            path="/shop/mens"
             element={
               <>
               <Navebarpage />
@@ -55,6 +59,39 @@ export default function App() {
               </>
             }
           />  
+           <Route
+            path="/shop/womens"
+            element={
+              <>
+              <Navebarpage />
+              <Womens/>
+              </>
+            }
+          />  <Route
+          path="/shop/jackets"
+          element={
+            <>
+            <Navebarpage />
+            <Jackets/>
+            </>
+          }
+        />  <Route
+        path="/shop/sneakers"
+        element={
+          <>
+          <Navebarpage />
+          <Sneakers/>
+          </>
+        }
+      />  <Route
+      path="/shop/hats"
+      element={
+        <>
+        <Navebarpage />
+        <Hats/>
+        </>
+      }
+    /> 
           </Route>
           <Route
             path="/contact"

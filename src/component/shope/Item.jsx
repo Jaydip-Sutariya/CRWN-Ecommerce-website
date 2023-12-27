@@ -1,23 +1,25 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { increment } from "../../store/slice/Counterslice"; 
 
 function Item({ key2 }) {
-  console.log(key2);
-  const data = useSelector((state) => {
-    return state.datas;
-  });
-  // console.log(data.hats.items[0]);
+  // console.log(key2);
+   
+  const dispatch =useDispatch()
+
+  // console.log(counter);
   return (
     <>
       <div className="menBox">
-        <div className="imgBox">
-          <img src={key2.imageUrl} alt="tt" />
+        <div className="imgBox" style={{backgroundImage:`url(${key2.imageUrl})`}}>
+         
+          <button className="cartbtn" onClick={() => dispatch(increment())} >Add To Cart</button>
         </div>
         <div className="itenName">
-          <span className="name">{key2.name}</span>
+          <span className="name">{key2.name} </span>
           <span>{key2.price}</span>
         </div>
-        <button>Add To Cart</button>
+       
       </div>
     </>
   );

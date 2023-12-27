@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import Collection from "../Collection";
 
 function Mens() {
+ 
+  // console.log(title);
   return (
-    <div>
-      <h1> mens</h1>
-    </div>
-  )
+    <>
+      <div className="singlepage">
+        <Collection title={"mens"} isForList={true} />
+      </div>
+    </>
+  );
 }
 
-export default Mens
+export default Mens;

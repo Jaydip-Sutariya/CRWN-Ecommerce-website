@@ -1,7 +1,7 @@
 import React from "react";
 import BoxItem from "./BoxItem";
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -13,27 +13,22 @@ export default function Homepage() {
   return (
       <>
       <div className="homediv">
-        <div className="home">
-        <BoxItem/>
-        <BoxItem/>
-        <BoxItem/>
-        <BoxItem/>
-        <BoxItem/>
-        </div>
-        </div>
-      </>
-        )}
-
-    
-      {/* {Object.keys(data).map((key) => {
-        console.log(data);
+        
+       {Object.keys(data).map((key) => {
+        // console.log(data);
       return (
       <BoxItem
           Imgurl={data[key].url}
           title={data[key].title}
           key={data[key].id}
+          IndexName={key}
         />
       );
-    })} */}
+    })} 
+        </div>
+      </>
+        )}
+
+    
 
 
