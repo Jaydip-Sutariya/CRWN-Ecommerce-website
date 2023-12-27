@@ -1,18 +1,19 @@
 
 import { NavLink } from "react-router-dom";
 
-
-function BoxItem({ Imgurl, title, key }) {
-  
+function BoxItem({ Imgurl, title, key, IndexName }) {
+  // console.log(title);
+  const route = `/shop/${IndexName}`;
+  console.log(route);
   return (
     <div className="container" key={key}>
       <div className="box">
-        <img src="	https://crwn-shop.netlify.app/images/hats.png" alt="" />
+        <img src={Imgurl} alt="" />
       </div>
-    <NavLink to="/shop/men" className="nlink">
-        <h2>Hats</h2>
+      <NavLink to={route} className="nlink">
+        <h2>{title}</h2>
         <p>SHOP NOW</p>
-    </NavLink>
+      </NavLink>
     </div>
   );
 }

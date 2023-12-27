@@ -18,14 +18,11 @@ function Signinpage() {
               </p>
               <div className="btn">
                 <Btnsignin btnName="sign in" />
-                <Btnsignin btnName="Sign in with Google or facebook" />
+                <Btnsignin btnName="Sign in with Google" />
               </div>
             </form>
           </div>
-          <div
-            className="right
-          "
-          >
+          <div className="right">
             <h2>I do not have a account</h2>
             <p>Sign up with your email and password</p>
             <form>

@@ -10,16 +10,12 @@ function Shopepage() {
   return (
     <>
       <div className="shopepadding">
+      {/* <Collection/> */}
         {Object.keys(data)
           .reverse()
           .map((key) => {
             return <Collection title={key} />;
           })}
-        {/* <Collection /> */}
-
-        {/* <Collection />
-      <Collection />
-      <Collection /> */}
       </div>
     </>
   );

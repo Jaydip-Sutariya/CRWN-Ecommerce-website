@@ -1,25 +1,29 @@
 import React from "react";
 import Item from "./Item";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
-function Collection({ title }) {
+function Collection({ title, isForList = false }) {
   // console.log(title);
   const data = useSelector((state) => {
     return state.datas;
   });
-  // const aa=Object.keys(data).map((key)=>key)
-  // console.log(aa);
+
+  // console.log(title);
   return (
     <>
       <div className="main">
-        <button>{title}</button>
+        <NavLink to={`/shop/${title}`}>
+          <button className="title">{title}</button>
+        </NavLink>
 
         <div className="fourPis">
-         {data[title].items.slice(0,4).map((key2)=>{
-          return(
-            <Item key2={key2}/>
-          )
-         })}
+          {console.log("=======", data, title)}
+          {(isForList ? data[title].items : data[title].items.slice(0, 4)).map(
+            (key2) => {
+              return <Item key2={key2} />;
+            }
+          )}
         </div>
       </div>
     </>
