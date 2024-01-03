@@ -6,7 +6,7 @@ function Shopepage() {
   const data = useSelector((state) => {
     return state.datas;
   });
-  console.log(Object.keys(data));
+  // console.log(Object.keys(data));
   return (
     <>
       <div className="shopepadding">
