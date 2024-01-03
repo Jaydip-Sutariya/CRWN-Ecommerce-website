@@ -254,7 +254,6 @@ const dataSlice = createSlice({
         },
       ],
     },
-    
   },
   reducers: {},
 });

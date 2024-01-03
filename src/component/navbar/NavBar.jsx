@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import pic from "./logo.png.png";
 import { NavLink } from "react-router-dom";
-import {  useSelector } from "react-redux";
-
-
+import { useSelector } from "react-redux";
+import Cartbox from "../checkout/Cartbox";
 
 function NavBar() {
-  const counter= useSelector(state => state.counter.count)
-console.log(counter);
+  const counter = useSelector((state) => state.counter.count);
+
+  // console.log(cartitemdata.map((item)=>item));
+
+  const [showCart, setShowCart] = useState(false);
+
+  // console.log(counter);
+  function cartbox() {
+    setShowCart(!showCart);
+  }
   return (
     <div className="MainNav">
       <div className="simbol">
@@ -29,11 +36,19 @@ console.log(counter);
           <NavLink to="/signin">SIGN IN</NavLink>
         </span>
 
-        <button>{counter}</button>
+        <button onClick={cartbox}>{counter}</button>
       </div>
+      <Cartbox/>
 
+     
+      {/* {showCart ? 
+       <Cartbox/>
+       : null} */}
     </div>
   );
 }
 
 export default NavBar;
+{
+  /* <img src="https://crwn-shop.netlify.app/images/hats.png" alt="" /> */
+}
